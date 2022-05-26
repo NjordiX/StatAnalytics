@@ -49,6 +49,9 @@
                                RadiusX="5" RadiusY="7"/>
                     <Ellipse Grid.Row="0" Grid.Column="1"
                              Fill="Aqua" Stroke="SteelBlue" StrokeThickness="5"/>
+                    
+                    <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
+                                  HorizontalAlignment="Right" Width="3"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Second"></TabItem>
