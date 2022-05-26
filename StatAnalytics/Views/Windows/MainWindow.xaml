@@ -14,14 +14,48 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
 
-    <Grid>
-        <TextBox 
-            Margin="30,20"
-            TextWrapping="Wrap"
-            Width="200" Height="20"
-            VerticalAlignment="Top" HorizontalAlignment="Left"
-            Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.5,0.5" >
-        </TextBox>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open"></MenuItem>
+                <MenuItem Header="Save"></MenuItem>
+                <MenuItem Header="Exit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Configuration"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Status Bar"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Width="150" Height="15" Value="50"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TabControl>
+            <TabItem Header="First">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="67*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="297*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Row="0" Grid.Column="0" 
+                               Fill="Tomato" Stroke="Olive" StrokeThickness="5" 
+                               RadiusX="5" RadiusY="7"/>
+                    <Ellipse Grid.Row="0" Grid.Column="1"
+                             Fill="Aqua" Stroke="SteelBlue" StrokeThickness="5"/>
+                    
+                    <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
+                                  HorizontalAlignment="Right" Width="3"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Second"></TabItem>
+        </TabControl>
+    </DockPanel>
 
-    </Grid>
 </Window>
