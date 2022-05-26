@@ -6,6 +6,7 @@
         
         xmlns:local="clr-namespace:StatAnalytics"
         xmlns:vm ="clr-namespace:StatAnalytics.ViewModels"
+        xmlns:cmd ="clr-namespace:StatAnalytics.Infrastructure.Commands"
         
         Title="{Binding Path=Title}" 
         Height="450" Width="800">
@@ -19,7 +20,11 @@
             <MenuItem Header="File">
                 <MenuItem Header="Open"></MenuItem>
                 <MenuItem Header="Save"></MenuItem>
-                <MenuItem Header="Exit" Command="{Binding CloseApplicationCommand}"></MenuItem>
+                <MenuItem Header="Exit"> <!--Command="{Binding CloseApplicationCommand}"-->
+                    <MenuItem.Command>
+                        <cmd:CloseApplicationCommand/>
+                    </MenuItem.Command>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Options">
                 <MenuItem Header="Configuration"></MenuItem>
