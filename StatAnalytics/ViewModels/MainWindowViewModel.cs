@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using StatAnalytics.Infrastructure.Commands;
 using StatAnalytics.ViewModels.Base;
 
 namespace StatAnalytics.ViewModels
@@ -32,10 +35,30 @@ namespace StatAnalytics.ViewModels
         {
             get => _Status;
             set => Set(ref _Status, value);
+        }
+        #endregion
+
+        #region Команды
+
+        #region CloseApplicationCommand
+        public ICommand CloseApplicationCommand { get; set; }
+        private bool CanCloseApplicationCommandExecute(object obj) => true;
+        private void OnCloseApplicationCommandExecuted(object obj)
+        {
+            Application.Current.Shutdown();
         } 
         #endregion
 
+        #endregion
 
+
+        public MainWindowViewModel()
+        {
+            #region Команды
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute); 
+            #endregion
+
+        }
 
 
 
