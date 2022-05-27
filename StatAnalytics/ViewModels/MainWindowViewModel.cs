@@ -12,7 +12,7 @@ namespace StatAnalytics.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
-        //One more test for Git 
+
 
         #region Заголовок окна
         private string _Title = "StatAnalytics";
