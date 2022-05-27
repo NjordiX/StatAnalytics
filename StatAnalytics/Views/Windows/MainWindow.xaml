@@ -50,7 +50,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
                         <!--<Image Source=""></Image>-->
-                        <fa:ImageAwesome Icon="Regular_File" Height="13" Margin="10,5,5,5" Foreground="Red"/>
+                        <fa:ImageAwesome Icon="Regular_File" Height="15" Margin="10,5,5,5" Foreground="Red"/>
                         <TextBlock Text="First"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -73,7 +73,7 @@
                                           MouseAction="LeftDoubleClick"/>
                         </Ellipse.InputBindings>-->
                     </Ellipse>
-                    
+
                     <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                                   HorizontalAlignment="Right" Width="3"/>
                 </Grid>
