@@ -12,6 +12,7 @@ namespace StatAnalytics.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
+        //Тест аккаунта гит
 
 
         #region Заголовок окна
