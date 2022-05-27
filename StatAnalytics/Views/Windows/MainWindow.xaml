@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:local="clr-namespace:StatAnalytics"
         xmlns:vm ="clr-namespace:StatAnalytics.ViewModels"
         xmlns:cmd ="clr-namespace:StatAnalytics.Infrastructure.Commands"
@@ -45,7 +46,14 @@
             </StatusBarItem>
         </StatusBar>
         <TabControl>
-            <TabItem Header="First">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Source=""></Image>-->
+                        <fa:ImageAwesome Icon="Regular_File" Height="13" Margin="10,5,5,5" Foreground="Red"/>
+                        <TextBlock Text="First"/>
+                    </StackPanel>
+                </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30*"/>
